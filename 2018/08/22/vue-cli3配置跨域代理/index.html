@@ -79,13 +79,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/tags/git/index.html">
+<meta name="description" content="最近要使用vue，因为以前没有接触过，而且我直接上手了vue-cli 3版本，现在能查到的vue-cli3的内容还很少，所以记录一下我学习时候遇到的坑。 参考文献 问题描述配置vue的proxy代理功能，因为3版本的cli没有了static目录，也没有webpack.js文件，导致这个坑我查了好久 解决办法 将原本放在static目录下的mock文件生成到public目录下 在根目录创建vue.c">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue cli3配置跨域代理">
+<meta property="og:url" content="http://yoursite.com/2018/08/22/vue-cli3配置跨域代理/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="最近要使用vue，因为以前没有接触过，而且我直接上手了vue-cli 3版本，现在能查到的vue-cli3的内容还很少，所以记录一下我学习时候遇到的坑。 参考文献 问题描述配置vue的proxy代理功能，因为3版本的cli没有了static目录，也没有webpack.js文件，导致这个坑我查了好久 解决办法 将原本放在static目录下的mock文件生成到public目录下 在根目录创建vue.c">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-08-22T07:23:53.534Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="vue cli3配置跨域代理">
+<meta name="twitter:description" content="最近要使用vue，因为以前没有接触过，而且我直接上手了vue-cli 3版本，现在能查到的vue-cli3的内容还很少，所以记录一下我学习时候遇到的坑。 参考文献 问题描述配置vue的proxy代理功能，因为3版本的cli没有了static目录，也没有webpack.js文件，导致这个坑我查了好久 解决办法 将原本放在static目录下的mock文件生成到public目录下 在根目录创建vue.c">
 
 
 
@@ -115,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/git/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/08/22/vue-cli3配置跨域代理/"/>
 
 
 
 
 
-  <title>标签: git | Hexo</title>
+  <title>vue cli3配置跨域代理 | Hexo</title>
   
 
 
@@ -140,7 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -274,54 +278,151 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>git<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/22/vue-cli3配置跨域代理/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/bolg_logo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/08/17/git使用分支，以及提交代码到master/" itemprop="url">
-              
-                <span itemprop="name">git使用分支，以及提交代码到master</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">vue cli3配置跨域代理</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-17T11:43:48+08:00"
-              content="2018-08-17" >
-          08-17
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-22T15:23:53+08:00">
+                2018-08-22
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>最近要使用vue，因为以前没有接触过，而且我直接上手了vue-cli 3版本，现在能查到的vue-cli3的内容还很少，所以记录一下我学习时候遇到的坑。 <a href="https://segmentfault.com/a/1190000014474361?utm_source=channel-hottest" target="_blank" rel="noopener">参考文献</a></p>
+<h4 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h4><pre><code>配置vue的proxy代理功能，因为3版本的cli没有了static目录，也没有webpack.js文件，导致这个坑我查了好久
+</code></pre><h4 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h4><ul>
+<li>将原本放在static目录下的mock文件生成到public目录下</li>
+<li><p>在根目录创建vue.config.js文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">    devServer: &#123;</span><br><span class="line">        proxy: &#123;</span><br><span class="line">            &apos;/api&apos;: &#123;</span><br><span class="line">                target: &apos;http://localhost:8080&apos;,</span><br><span class="line">                changeOrigin: true,</span><br><span class="line">                ws: true,</span><br><span class="line">                pathRewrite: &#123;</span><br><span class="line">                  &apos;^/api&apos;: &apos;/mock/&apos;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">methods:&#123;</span><br><span class="line">    getHomeInfo()&#123;</span><br><span class="line">        //在这里就可以直接使用/api/而不用每次都自己去public目录下一级一级找文件</span><br><span class="line">        axios.get(&apos;/api/test.json&apos;)</span><br><span class="line">            .then(this.getHomeInfoSucc)</span><br><span class="line">    &#125;,</span><br><span class="line">    getHomeInfoSucc(res)&#123;</span><br><span class="line">        console.log(res)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/17/vue-cli3-配置路径别名/" rel="next" title="vue cli3 配置路径别名">
+                <i class="fa fa-chevron-left"></i> vue cli3 配置路径别名
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -329,6 +430,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -349,8 +454,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -414,6 +528,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#问题描述"><span class="nav-number">1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决办法"><span class="nav-number">2.</span> <span class="nav-text">解决办法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -555,6 +685,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
