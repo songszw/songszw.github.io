@@ -292,6 +292,181 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://songszw.github.io/2018/08/23/pixelboook安装Ubuntu16-04/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="你好丶我姓宋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://ouijhpjg0.bkt.clouddn.com/blog_logo.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="你好丶我姓宋">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/23/pixelboook安装Ubuntu16-04/" itemprop="url">pixelboook安装Ubuntu16.04</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-23T11:47:19+08:00">
+                2018-08-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>上周作死，入手一台pixelbook，使用Chrome OS吧，感觉太鸡肋，所以准备装Linux  </p>
+<p>本来想装CentOS，但是查了一圈资料没找到crouton安装CentOS的方法，我也算是计算机小白，加之pixelbook价格比较–贵，不敢用来折腾，所以决定安装Ubuntu</p>
+<p>插嘴一句，不知是我RP问题还是资料有问题，我参照网上现有资料安装，总能出现各种各样的bug，结合我一周以来每天2点以后才睡觉的痛苦经历，我决定把安装过程记录下来，万一哪天需要重装系统的话，还可以用来参考。</p>
+<hr>
+<h4 id="进入开发者模式"><a href="#进入开发者模式" class="headerlink" title="进入开发者模式"></a>进入开发者模式</h4><ul>
+<li>同时按住 esc、刷新键还有关机键<ul>
+<li>当cb屏幕出现恢复模式的提示语，按ctrl+d，等待cb重启</li>
+<li>以后每次cb开机都需要按ctrl+d进去系统</li>
+</ul>
+</li>
+</ul>
+<h4 id="下载crouton"><a href="#下载crouton" class="headerlink" title="下载crouton"></a>下载crouton</h4><ul>
+<li><a href="https://raw.githubusercontent.com/dnschneid/crouton/master/installer/crouton" target="_blank" rel="noopener">crouton下载地址</a></li>
+</ul>
+<h4 id="在cb上按ctrl-alt-t-进入crosh"><a href="#在cb上按ctrl-alt-t-进入crosh" class="headerlink" title="在cb上按ctrl+alt+t 进入crosh"></a>在cb上按ctrl+alt+t 进入crosh</h4><ul>
+<li>输入<code>shell</code></li>
+<li><code>cd ~/Downloads</code></li>
+<li><code>sudo sh -e ./crouton</code></li>
+<li><code>sh ./crouton -r list</code>   //查看crouton支持的版本<ul>
+<li><a href="https://baike.baidu.com/item/ubuntu#3_1" target="_blank" rel="noopener">Ubuntu各版本代号</a></li>
+<li>我安装的是Ubuntu16.04版本，所以就是xenial</li>
+</ul>
+</li>
+</ul>
+<h4 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h4><ul>
+<li><code>sudo sh -e ~/Downloads/crouton -r xenial -t core</code></li>
+<li><code>sudo sh -e ~/Downloads/crouton -r xenial -t core,audio,cli-extra,core,touch,,x11,xorg,gtk-extra,keyboard,gnome,gnome-desktop -u</code><ul>
+<li>我用的是gnome桌面，如果大家想用别的桌面可以自行更改，将gnome,gnome-desktop换成对应的桌面就可以</li>
+</ul>
+</li>
+</ul>
+<h4 id="进入Ubuntu"><a href="#进入Ubuntu" class="headerlink" title="进入Ubuntu"></a>进入Ubuntu</h4><ul>
+<li><code>sudo startgnome</code></li>
+</ul>
+<h4 id="Ubuntu跟chrome-os切换"><a href="#Ubuntu跟chrome-os切换" class="headerlink" title="Ubuntu跟chrome os切换"></a>Ubuntu跟chrome os切换</h4><ul>
+<li>同时按下shift+ctrl+alt+刷新(第一排第三个)</li>
+</ul>
+<h4 id="在Ubuntu下可能存在的问题"><a href="#在Ubuntu下可能存在的问题" class="headerlink" title="在Ubuntu下可能存在的问题"></a>在Ubuntu下可能存在的问题</h4><p>进去以后，按ctrl+alt+t如果没有出现终端，可以尝试一下方法(当初我遇到这个问题困扰了好久,据说是因为语言环境造成的)，<a href="https://sspai.com/post/41459" target="_blank" rel="noopener">参考</a></p>
+<ul>
+<li>首先注销Ubuntu返回chrome os</li>
+<li>然后再Ubuntu下进入shell(ctrl+alt+t，输入shell)</li>
+<li>在chrome os进入Ubuntu终端<ul>
+<li><code>sudo enter-chroot</code></li>
+<li><code>sudo apt-get install language-pack-zh-hans language-pack-zh-hans-base language-pack-gnome-zh-hans language-pack-gnome-zh-hans-base</code></li>
+<li><code>sudo apt-get install `check-language-support -l zh`</code></li>
+<li><code>sudo localectl set-locale LANG=zh_CN.UTF-8</code></li>
+<li><code>logout</code></li>
+</ul>
+</li>
+<li>好了，接下来就可以再次切换到Ubuntu系统中了<ul>
+<li><code>sudo startgnome</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h4><p>入手pixelbook也将近一个月了，拖拖拉拉一直到今天(2018-8-23)才写完，因为github不能被百度和Google收录，所以也不知道文章能否被大家发现</p>
+<p>最后，祝大家pixelbook的愉快</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://songszw.github.io/2018/08/22/vue-cli3配置跨域代理/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -987,7 +1162,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1009,7 +1184,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
